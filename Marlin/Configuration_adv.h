@@ -3662,7 +3662,8 @@
  *
  * NOTE: This option sacrifices some cooling fan speed options.
  */
-//#define LASER_SYNCHRONOUS_M106_M107
+ //EDITED THIS TO ENABLE THE LASER SYNCHRONOUS OUTPUT USING THE FAN PIN
+#define LASER_SYNCHRONOUS_M106_M107
 
 /**
  * Coolant Control

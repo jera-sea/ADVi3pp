@@ -588,6 +588,16 @@
 #define BED_OVERSHOOT    10   // (°C) Forbid temperatures over MAXTEMP - OVERSHOOT
 #define COOLER_OVERSHOOT  2   // (°C) Forbid temperatures closer than OVERSHOOT
 
+
+
+
+/**
+ * The BLTouch probe uses a Hall effect sensor and emulates a servo.
+ */
+#define BLTOUCH
+
+
+
 //===========================================================================
 //============================= PID Settings ================================
 //===========================================================================
@@ -861,6 +871,7 @@
   #define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
   #define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
   #define Z_MIN_PROBE_ENDSTOP_INVERTING false // Set to true to invert the logic of the probe.
+  #define Z_SAFE_HOMING //enable z safe homing
 #else // @advi3++: Mark II or Mark I no probe
   #define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
   #define Z_MAX_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
@@ -1124,10 +1135,7 @@
 //#define Z_PROBE_SERVO_NR 0       // Defaults to SERVO 0 connector.
 //#define Z_SERVO_ANGLES { 70, 0 } // Z Servo Deploy and Stow angles
 
-/**
- * The BLTouch probe uses a Hall effect sensor and emulates a servo.
- */
-//#define BLTOUCH
+
 
 /**
  * Touch-MI Probe by hotends.fr
